@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ darkMode: false, mobileMenuOpen: false }" :class="{ 'dark': darkMode }">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Amara S. Konneh</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        .skill-chart {
+            height: 8px;
+            background: rgba(79, 70, 229, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(45deg, #4F46E5, #10B981);
+            transition: width 0.5s ease;
+        }
+
+        .communication-card {
+            background: linear-gradient(145deg, rgba(79, 70, 229, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gradient-text">ASK</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <button @click="darkMode = !darkMode" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700">
+                        <i x-show="!darkMode" class="fas fa-moon"></i>
+                        <i x-show="darkMode" class="fas fa-sun"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenuOpen" class="md:hidden absolute w-full bg-white dark:bg-gray-800 shadow-lg">
+            <div class="px-4 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2">Home</a>
+                <a href="#about" class="block px-3 py-2">About</a>
+                <a href="#experience" class="block px-3 py-2">Experience</a>
+                <button @click="darkMode = !darkMode" class="w-full text-left px-3 py-2">
+                    Toggle Dark Mode
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <header class="pt-32 pb-20 bg-gradient-to-br from-indigo-100 to-emerald-100 dark:from-gray-800 dark:to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="Amaras.jpg" alt="Amara S. Konneh" 
+                         class="rounded-2xl shadow-xl w-full h-auto max-w-lg mx-auto border-8 border-white dark:border-gray-800">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        Strategic Technology Leader
+                    </h1>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                        Bridging technical excellence with operational efficiency through innovative DevOps solutions.
+                    </p>
+                    <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                        <div class="badge">Cloud Architecture</div>
+                        <div class="badge">Infrastructure Security</div>
+                        <div class="badge">Team Leadership</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Communication Section -->
+    <section class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="communication-card rounded-2xl p-8 md:p-12 shadow-lg">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <!-- Add your OK FM image here -->
+                    <div class="md:w-1/2">
+                        <img src="OK.FM-Pic.jpg" alt="OK FM Radio Experience" 
+                             class="rounded-xl shadow-lg w-full h-64 object-cover">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-6 gradient-text">Public Engagement</h2>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-broadcast-tower text-emerald-500 text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">Tech Talks Radio Show</h3>
+                                    <p class="text-gray-600 dark:text-gray-300">
+                                        Hosted weekly technology segment on OK FM, breaking down complex tech concepts for public understanding.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-users text-indigo-500 text-2xl mr-4 mt-1"></i>
+                                <div>
+                                    <h3 class="text-xl font-semibold mb-2">Community Workshops</h3>
+                                    <p class="text-gray-600 dark:text-gray-300">
+                                        Conducted 7+ public workshops on digital transformation and cloud computing fundamentals.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leadership Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 gradient-text">Leadership Philosophy</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-indigo-100 dark:bg-gray-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-people-group text-indigo-600 dark:text-emerald-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">Team Development</h3>
+                    </div>
+                    <ul class="space-y-4 text-gray-600 dark:text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                            Mentored 15+ beginner engineers to junior positions
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                            Agile team management for distributed teams
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-emerald-500 mr-2"></i>
+                            Conflict resolution & collaborative problem-solving
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-indigo-100 dark:bg-gray-600 rounded-lg flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-line text-indigo-600 dark:text-emerald-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-semibold">Strategic Vision</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-indigo-50 dark:bg-gray-600 rounded-lg">
+                            <h4 class="font-semibold mb-2">Technology Roadmapping</h4>
+                            <p class="text-sm">2-year infrastructure planning for enterprise clients</p>
+                        </div>
+                        <div class="p-4 bg-indigo-50 dark:bg-gray-600 rounded-lg">
+                            <h4 class="font-semibold mb-2">Cost Optimization</h4>
+                            <p class="text-sm">Average 35% reduction in cloud spending for managed clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex justify-center space-x-6 mb-6">
+                <a href="https://www.linkedin.com/in/amara-s-konneh" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/yourprofile" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://twitter.com/yourprofile" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <p class="mb-4">Monrovia, Liberia | amaraskonneh74@gmail.com</p>
+            <p>&copy; 2023 Amara S. Konneh. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.badge {
+    @apply px-4 py-2 bg-indigo-100 dark:bg-gray-600 text-indigo-600 dark:text-emerald-400 rounded-full text-sm font-medium;
+}
+
+.tech-tag {
+    @apply px-3 py-1 bg-emerald-100 dark:bg-gray-600 text-emerald-600 dark:text-emerald-300 rounded-full text-sm;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #4F46E5, #10B981);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.certificate-card {
+    @apply transition-transform duration-300 hover:scale-105;
+}
+
+@media (max-width: 640px) {
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+}
