@@ -1,0 +1,114 @@
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Hero Section Adjustments */
+    .hero header {
+        padding-top: 6rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero .flex.justify-center.space-x-6 {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    /* Timeline Adjustments */
+    .timeline-item .md\:flex {
+        flex-direction: column;
+    }
+
+    .timeline-item .md\:w-5\/12 {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+    }
+
+    .timeline-item .md\:pl-12 {
+        padding-left: 0;
+    }
+
+    .timeline .absolute.left-1\/2 {
+        display: none;
+    }
+
+    /* Skills Grid */
+    .grid.md\:grid-cols-3 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Contact Section */
+    .lg\:flex {
+        flex-direction: column;
+    }
+
+    .lg\:pr-12 {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    /* Form Elements */
+    .form-input {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+
+    /* Navigation Padding */
+    nav .px-4 {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Profile Image Size */
+    .w-48.h-48 {
+        width: 36vw;
+        height: 36vw;
+    }
+
+    /* Section Padding */
+    section.py-20 {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further Mobile Optimizations */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .skill-card {
+        padding: 1.5rem;
+    }
+
+    footer .space-x-6 {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    /* Timeline Dot */
+    .md\:w-2\/12 {
+        width: 100%;
+        justify-content: flex-start;
+        margin: 1rem 0;
+    }
+
+    /* Contact Section */
+    .rounded-2xl.shadow-xl {
+        border-radius: 1rem;
+        padding: 1.5rem;
+    }
+}
